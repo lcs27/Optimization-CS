@@ -2,6 +2,8 @@
 % ST7 Optimization - CentraleSupelec
 % contact: jean-christophe@pesquet.eu
 
+%% Setup
+
 clear all
 close all
 
@@ -27,7 +29,7 @@ Q(1) = 140;
 P(2) = 170;
 Q(2) = 170;
 
-% question 6
+%% question 6
 delta = 0.2;
 
 nitm = 2000;
@@ -38,7 +40,8 @@ plot(E)
 xlabel('$n$','interpreter','latex','FontSize', 20)
 ylabel('$\|x_n-\bar{x}\|$','interpreter','latex','FontSize', 20)
 
-% question 7
+
+%% question 7
 
 % visual impact of delta
 delta = 0.01;
@@ -82,7 +85,8 @@ plot(deltarange,nit)
 xlabel('$\delta$','interpreter','latex','FontSize', 20)
 ylabel('Number of iterations','FontSize', 15)
 
-% question 8
+
+%% question 8
 delta = deltaopt;
 [xd,E] = Dykstra(y,P,Q,delta,nitm,x);
 

@@ -1,5 +1,6 @@
 function [up,vp] = projhyperslab(u,v,delta)
 % [up,vp] = projhyperslab(u,v,delta): project onto Hyperslab
+% Projection of a point (u,v) in R2 to a domain C={|u-v|<=delta}
 
 d = u-v;
 
