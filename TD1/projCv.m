@@ -9,9 +9,9 @@ function xp=projCv(x,P,Q,i,delta)
 xp = x;
 for n = P(1)+(i-1):2:P(2)-1
     for m = Q(1):Q(2)
-        [up,vp] = projhyperslab(x(n+1,m),x(n,m),delta);
+        [up,vp] = projhyperslab(x(n,m),x(n+1,m),delta);
         xp(n,m) = up;
-        xp(n,m+1) = vp;
+        xp(n+1,m) = vp;
     end
 end
 

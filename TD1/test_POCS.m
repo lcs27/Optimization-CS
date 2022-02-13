@@ -65,7 +65,7 @@ title('Restored, delta = 0.1')
 % determination of the best delta
 nit = [];
 EE = [];
-deltarange = 0.01:1e-3:0.2;
+deltarange = 0.01:1e-2:0.2;
 for delta = deltarange
     [xp,E] = POCS(y,P,Q,delta,nitm,x);
     nit = [nit length(E)];
