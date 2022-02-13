@@ -14,5 +14,6 @@ This solution is proposed by Chensheng Luo.
 - Dykstra.m: another improved algo named Dykstra
 
 ## Final results:
-POCS: ||y-PC(y)|| = 0.539394
-Dykstra: ||y-PC(y)|| = 0.506625
+- deltaopt =0.1400   
+- POCS: ||y-PC(y)|| = 0.539394   
+-  Dykstra: ||y-PC(y)|| = 0.506625   
