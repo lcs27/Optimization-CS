@@ -89,4 +89,3 @@ if wmax >= -tol;
       PHIiter=PHIiter+1;
    end
 end
-

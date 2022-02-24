@@ -17,11 +17,11 @@ c{1}=[1;2.5];c{2}=[4;1];c{3}=[2;1];c{4}=[2;4];c{5}=[8;2.5];
 ck=cell(5,20); rk=cell(5,20);
 for t=1:20
 for i=1:5
-    A=[]; b=[]; % TO BE COMPLETED
+    A=[B_A]; b=[B_b]; 
     for j=1:5
         if j~=i
-            A=[]; % TO BE COMPLETED
-            b=[]; % TO BE COMPLETED
+            A=[A;2*(c{j}-c{i})' /norm(2*(c{j}-c{i})') ]; 
+            b=[b;(norm(c{j})^2-norm(c{i})^2)/norm(2*(c{j}-c{i})')]; 
         end
     end
     V_A{i}=A;
@@ -35,12 +35,17 @@ end
 %                   s.t.  A_bar * x <= b_bar 
 %
 for i=1:5
-    %  the constraints
-    A_bar=[];  % TO BE COMPLETED
-    b_bar=[];  % TO BE COMPLETED
+%radius of the Chebyshev ball is positive
+    A_bar=[0 0 -1];
+    b_bar=[0];
+    
+    % add the constraints
+    A_bar=[A_bar;[V_A{i} ones(size(V_A{i},1),1)]];
+    b_bar=[b_bar;V_b{i}];
+    
     
     % the objective function f'*x
-    f=[];  % TO BE COMPLETED
+    f=[0;0;-1];
     
     %solve the LP 
     X = linprog(f,A_bar,b_bar)

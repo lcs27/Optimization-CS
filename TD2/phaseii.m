@@ -26,7 +26,7 @@ inon=K(~J);
 B=A(:,ibasic);
 xbasic=B\b;
 z=c(ibasic)*xbasic;
-if m<n;
+if m<n
    X(ibasic)=xbasic;
    Cred=c(inon) - (c(ibasic)/B)*A(:,inon);
    OPTEST=1;

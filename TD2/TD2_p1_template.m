@@ -5,35 +5,37 @@ clc
 
 %% 
 %%P
-PV=[0 0; 0 1; 1.66 1; 0.33 0]; % Pv are the vertices of the polyhedron P
-A=[0 -1; -1 0 ;  3  -4; 0 1;]
-b=[ 0; 0 ; 1; 1];
+%PV=[0 0; 0 1; 1.66 1; 0.33 0]; % Pv are the vertices of the polyhedron P
+%A=[0 -1; -1 0 ;  3  -4; 0 1;]
+%b=[ 0; 0 ; 1; 1];
 
-pgn=polyshape(PV(:,1),PV(:,2));
+
+%pgn=polyshape(PV(:,1),PV(:,2));
 
  % P_1
 %PV=[0 0; 0 0.8; 0.2 1; 1.5 1; 0.5 0];
 %A=[0 -1; -1 0 ;  4  -4; 0 1;-0.5 0.5]
 %b=[ 0; 0 ; 2; 1; 0.4];
 
- pgn=polyshape(PV(:,1),PV(:,2));
+ %pgn=polyshape(PV(:,1),PV(:,2));
 
 
 % % P_2
-% PV=[0 0; 0.33 0];
-% A=[0 -1; -1 0 ;  3  -4]
-% b=[ 0; 0 ; 1];
+ %PV=[0 0; 0.33 0];
+ %A=[0 -1; -1 0 ;  3  -4]
+ %b=[ 0; 0 ; 1];
 % 
-% pgn=polyshape(PV(:,1),PV(:,2));
+%pgn=polyshape(PV(:,1),PV(:,2));
 plot(pgn);
 
 %%
 % normalize the half space representation in such a way that each
 % constraint has a norm =1. 
-for i=1:size(A,1)
-    b(i,1)=b(i)/norm(A(i,:));
-    A(i,:)=A(i,:)/norm(A(i,:));
-end
+
+%for i=1:size(A,1)
+%    b(i,1)=b(i)/norm(A(i,:));
+%    A(i,:)=A(i,:)/norm(A(i,:));
+%end
 
 
 %%
@@ -43,11 +45,12 @@ end
 %                   max [c*x] 
 %                   s.t.  A_bar *x = b_bar 
 %
-A_bar=             % TO BE COMPLETED
-b_bar=             % TO BE COMPLETED
+a_tilde = vecnorm(A,2,2);
+A_bar=[A,a_tilde,eye(size(A,1));1 -1 zeros(1,size(A,1)+1)]
+b_bar=[b;0]
 
 % % the objective
-c=                 % TO BE COMPLETED
+c=[0 0 +1 zeros(1,size(A,1))];
 
 %%
 

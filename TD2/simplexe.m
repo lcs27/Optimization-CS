@@ -2,21 +2,21 @@ function [zmax,PHIiter,PHIIiter,xbasic,ibasic]=simplexe(A,b,c);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  fonction         Simplexe(A,b,c)
 %
-% Cette routine permet de résoudre le problème
+% Cette routine permet de r¨¦soudre le probl¨¨me
 %
 %      max (cx) sous la contrainte Ax = b , avec b >= 0
 %
 % par l'algorithme du simplexe.
 % En sortie, elle retourne :
-% zmax : la valeur du profit à l'optimum.
-% PHIiter : le nombre d'itération dans la phase I.
-% PHIIiter : le nombre d'itération dans la phase II.
-% xbasic : Les valeurs des variables de base à l'optimum.
-% ibasic : les indices des variables de base à l'optimum.
+% zmax : la valeur du profit ¨¤ l'optimum.
+% PHIiter : le nombre d'it¨¦ration dans la phase I.
+% PHIIiter : le nombre d'it¨¦ration dans la phase II.
+% xbasic : Les valeurs des variables de base ¨¤ l'optimum.
+% ibasic : les indices des variables de base ¨¤ l'optimum.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% Cette routine est le clone de 'linprog', développé par 
+% Cette routine est le clone de 'linprog', d¨¦velopp¨¦ par 
 % Jeff Stuart
 % Department of Mathematics,
 % University of Southern Mississippi, Hattiesburg, MS 39406.
