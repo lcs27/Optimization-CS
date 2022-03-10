@@ -37,7 +37,7 @@ cs{1}=c;
 if sum(size(x))~=0
         if (q')*round(x')<=Q
             minor=(p')*round(x');
-             fprintf('\t Minor bound is now'),disp(minor),fprintf('%c%c', 8, 8),fprintf('got at'),disp(round(x'));
+             fprintf('\t Minor bound is now'),disp(minor),fprintf('%c%c', 8, 8),fprintf('   got at'),disp(round(x));
         else
             minor=inf;
             fprintf('\t Nearby integer value is unfeasible, minor bound is now'),disp(minor);
@@ -87,7 +87,7 @@ while 1
         if (q')*round(x1')<=Q
             if (p')*round(x1')>minor
                 minor=(p')*round(x1');
-                fprintf('\t\t\t Minor bound updated to'),disp(minor),fprintf('%c%c', 8, 8),fprintf('got at'),disp(round(x1'));
+                fprintf('\t\t\t Minor bound updated to'),disp(minor),fprintf('%c%c', 8, 8),fprintf('   got at'),disp(round(x1));
             end
         end
     end
@@ -112,7 +112,7 @@ while 1
         if (q')*round(x2')<=Q
             if (p')*round(x2')>minor
                 minor=(p')*round(x2');
-                fprintf('\t\t\t Minor bound updated to'),disp(minor),fprintf('%c%c', 8, 8),fprintf('got at'),disp(round(x2'));
+                fprintf('\t\t\t Minor bound updated to'),disp(minor),fprintf('%c%c', 8, 8),fprintf('   got at'),disp(round(x2));
             end
         end
     end
