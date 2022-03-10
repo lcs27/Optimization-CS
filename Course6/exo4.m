@@ -77,7 +77,7 @@ while 1
     if mu1<minor
         mu1=inf;% Discarded
         x1=[];
-         fprintf('\t\t\t Discarded as is smaller than minor bound'),disp(minor);
+         fprintf('\t\t\t Discarded as smaller than minor bound'),disp(minor);
     end
     %Update bound
     if sum(size(x1))~=0
@@ -102,7 +102,7 @@ while 1
      if mu2<minor
         mu2=inf;% Discarded
         x2=[];
-         fprintf('\t\t\t Discarded as is smaller than minor bound'),disp(minor);
+         fprintf('\t\t\t Discarded as smaller than minor bound'),disp(minor);
      end
     %Update bound
     if sum(size(x2))~=0
