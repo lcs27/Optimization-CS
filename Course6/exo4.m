@@ -34,10 +34,12 @@ cs{1}=c;
 if sum(size(x))~=0
         if q*RoundExo4(x')<=Q
             minor=p*RoundExo4(x');
+             fprintf('\t Minor bound is now'),disp(minor),fprintf('%c%c', 8, 8),fprintf('got at'),disp(RoundExo4(x'));
         else
             minor=inf;
+             fprintf('\t Nearby integer value is unfeasible, minor bound is now'),disp(minor);
         end
-        fprintf('\t Minor bound is now'),disp(minor);
+       
 end
 %% Iteration
 n=1;
@@ -82,7 +84,7 @@ while 1
         if q*RoundExo4(x1')<=Q
             if p*RoundExo4(x1')>minor
                 minor=p*RoundExo4(x1');
-                fprintf('\t\t\t Minor bound updated to'),disp(minor);
+                fprintf('\t\t\t Minor bound updated to'),disp(minor),fprintf('%c%c', 8, 8),fprintf('got at'),disp(RoundExo4(x1'));
             end
         end
     end
@@ -107,7 +109,7 @@ while 1
         if q*RoundExo4(x2')<=Q
             if p*RoundExo4(x2')>minor
                 minor=(p')*RoundExo4(x2');
-                fprintf('\t\t\t Minor bound updated to'),disp(minor);
+                fprintf('\t\t\t Minor bound updated to'),disp(minor),fprintf('%c%c', 8, 8),fprintf('got at'),disp(RoundExo4(x2'));
             end
         end
     end
