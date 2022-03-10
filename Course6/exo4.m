@@ -7,10 +7,10 @@
 %is proposed by our teacher.
 clear
 %% Context of question
-% Solve a ILP question: 
+% Solve a MILP question: 
 % max px=5x1+4x2+6x3 with x1,x2 in [0,+inf) and x3 in N
 % s.t. 5x1+6x2+3x3<=20
-% x1+3x3<=12
+%        x1+3x3<=12
 q=[5,4,6;1,0,3];
 p=[5,4,6];
 Q=[20;12];
