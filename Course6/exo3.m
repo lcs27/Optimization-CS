@@ -48,7 +48,7 @@ end
 n=1;
 while 1
     fprintf('n='),disp(n);
-    [~,l]=min(mus);% Find the part to be branched
+    [~,l]=max(mus);% Find the part to be branched
     x=xs{l};
     A=As{l};
     b=bs{l};
