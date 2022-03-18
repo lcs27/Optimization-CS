@@ -1,0 +1,81 @@
+\documentclass{CSArticle}[english]
+\usepackage{symbols/LCSsymbols}
+\title{\textbf{Example of LCS self-designed template}}
+\author{Chensheng LUO}
+\date{March 2022}
+
+\begin{document}
+
+\MakeSimpleTitle
+
+\section{LCSsymbols package}\verb|LCSsymbols| contains a set of simplified symbols which can be used in formula taping. The list of simplified symbols are as follows, all these command should be typed inside \verb|$...$|
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+ \verb|\deri{a}{b}| &  $\deri{a}{b}$\\
+ \verb|\deriN{a}{b}{n}|& $\deriN{a}{b}{n}$\\
+\verb|	  \ParDeri{a}{b}	| & $	  \ParDeri{a}{b}	$\\
+\verb|	  \ParDeriN{a}{b}{n}	| & $	  \ParDeriN{a}{b}{n}	$\\
+\verb|	  \Deri{a}{b}	| & $	  \Deri{a}{b}	$\\
+\verb|	  \DeriN{a}{b}{n}	| & $	  \DeriN{a}{b}{n}	$\\
+\verb|	  a\laplace b	| & $	  a\laplace b	$\\
+\verb|	  \abs \scalaire \bbs	| & $	  \abs \scalaire \bbs	$\\
+\verb|	   a \nabla b, \cbs \nablabs \dbs	| & $	   a \nabla b, \cbs \nablabs \dbs	$\\
+\verb|	  \Abb \gbb	\Onebb| & $	  \Abb \gbb	\Onebb$\\
+\verb|	  \Abf \bbf	\Onebf| & $	  \Abf \bbf	\Onebf$\\
+\verb|	  \Abs,\bbs,\Gammabs,\deltabs,\varphibs, \nablabs	| & $	  \Abs,\bbs,\Gammabs,\deltabs,\varphibs, \nablabs	$\\
+\verb|	  \Ao,\bo,\Gammao,\deltao,\varphio,\nablao,\Oneo	| & $	  \Ao,\bo,\Gammao,\deltao,\varphio,\nablao,\Oneo	$\\
+\verb|	  \Aoo,\boo,\Gammaoo,\deltaoo,\varphioo,\nablaoo,\Oneoo	| & $	  \Aoo,\boo,\Gammaoo,\deltaoo,\varphioo,\nablaoo	,\Oneoo$\\
+\verb|	  \Ad,\bd,\Gammad,\deltad,\varphid,\nablad,\Oned	| & $	  \Ad,\bd,\Gammad,\deltad,\varphid,\nablad,\Oned	$\\
+\verb|	  \Add,\bdd,\Gammadd,\deltadd,\varphidd,\nabladd,\Onedd	| & $	  \Add,\bdd,\Gammadd,\deltadd,\varphidd,\nabladd,\Onedd	$\\
+\verb|	  \Acal	| & $	  \Acal	$\\
+\verb|	  \setR,\setC,\setN,\setZ,\setRR	| & $	  \setR,\setC,\setN,\setZ,\setRR	$\\
+\verb|	  \rel 	| & $	  \rel 	$\\
+\verb|	  \ssi,\iff	| & $	  \ssi,\iff	$\\
+\verb|	  \eg,\Eg	| & $	  \eg,\Eg	$\\
+\verb|	  \ie,\Ie	| & $	  \ie,\Ie	$\\
+\verb|	  \cf,\Cf	| & $	  \cf,\Cf	$\\
+\verb|	  \etc,\vs,\wrt,\dof	| & $	  \etc,\vs,\wrt,\dof	$\\
+\verb|	  \etal,\resp,\st,\aka,\abr	| & $	  \etal,\resp,\st,\aka,\abr	$\\
+\verb|	  \tsum	| & $	  \tsum	$\\
+\verb|	  \grad \xbs	| & $	  \grad \xbs	$\\
+\verb|	  \norm{a}	| & $	  \norm{a}	$\\
+
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\verb|\Intv{a}{b}|&$\Intv{a}{b}$\\
+\verb|\IntIntv{a}{b}|&$\IntIntv{a}{b}$\\
+\verb|\UpperInt{a}|&$\UpperInt{a}$\\
+\verb|\LowerInt{a}|&$\LowerInt{a}$\\
+\hline
+\end{tabular}
+\end{table}
+\newpage
+\section{LCSArticle package}
+\verb|LCSArtcile|, as well as \verb|CSArtcile|,define a good article template which can be used easily. The following present some functions as well as some good sentence that you can copy when writing articles.
+\subsection{Graph insert}
+The following passage is a good way to insert image, eps format from MATLAB are advised. 
+\begin{lstlisting}[style=TeX]
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{figure/example.eps}
+\caption{Example Picture}
+\label{fig:example}
+\end{figure}
+\end{lstlisting}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{../figure/example.eps}
+\caption{Example Picture}
+\label{fig:example}
+\end{figure}
+\subsection{Insert code and alternative}
+To insert code, you just need \verb|\begin{lstlisting}[style=TeX/MATLAB/Cpp/Python]| and \verb|\end{lstlisting}|. The whole passage serve as an example.
+
+\end{document}

@@ -1,0 +1,7 @@
+function c%Post-treatment of solution
+x=reshape(x_tilde,n,n);
+Boxes=zeros(n,1);
+for i=1:n
+    Boxes(i)=find(x(:,i));
+end
+PlotSolution (Boxes, PositionsObjects, PositionsBoxes);
